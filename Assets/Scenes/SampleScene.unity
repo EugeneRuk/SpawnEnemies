@@ -667,7 +667,7 @@ GameObject:
   - component: {fileID: 1690206038}
   - component: {fileID: 1690206037}
   m_Layer: 0
-  m_Name: AllSpawnPoints
+  m_Name: SpawnPointParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -686,7 +686,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spawnWaitingTimeInSeconds: 2
-  _allSpawnPoints: {fileID: 1690206038}
+  _spawnPointParent: {fileID: 1690206038}
   _templates:
   - {fileID: -3909651540892788721, guid: e538ce5be5a517a43903fed4114f19e4, type: 3}
   - {fileID: -4428517349251961120, guid: 207e70b096631b94587be9188cd3ad07, type: 3}

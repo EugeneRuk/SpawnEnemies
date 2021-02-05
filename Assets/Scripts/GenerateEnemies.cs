@@ -1,11 +1,10 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GenerateEnemies : MonoBehaviour
 {
     [SerializeField] private float _spawnWaitingTimeInSeconds;
-    [SerializeField] private Transform _allSpawnPoints;
+    [SerializeField] private Transform _spawnPointParent;
     [SerializeField] private Enemy[] _templates;
 
     private Transform[] _spawnPoints;
@@ -19,10 +18,10 @@ public class GenerateEnemies : MonoBehaviour
     }
     private void Awake()
     {
-        _spawnPoints = new Transform[_allSpawnPoints.childCount];
-        for (int i = 0; i < _allSpawnPoints.childCount; i++)
+        _spawnPoints = new Transform[_spawnPointParent.childCount];
+        for (int i = 0; i < _spawnPointParent.childCount; i++)
         {
-            _spawnPoints[i] = _allSpawnPoints.GetChild(i);
+            _spawnPoints[i] = _spawnPointParent.GetChild(i);
         }
     }
     private void Start()
