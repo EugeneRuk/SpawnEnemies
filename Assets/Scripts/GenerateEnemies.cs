@@ -16,6 +16,7 @@ public class GenerateEnemies : MonoBehaviour
             _spawnWaitingTimeInSeconds = 0;
         }
     }
+
     private void Awake()
     {
         _spawnPoints = new Transform[_spawnPointParent.childCount];
@@ -24,10 +25,12 @@ public class GenerateEnemies : MonoBehaviour
             _spawnPoints[i] = _spawnPointParent.GetChild(i);
         }
     }
+
     private void Start()
     {
         StartCoroutine(Spawn());
     }
+
     private IEnumerator Spawn()
     {
         var waitForSeconds = new WaitForSeconds(_spawnWaitingTimeInSeconds);
